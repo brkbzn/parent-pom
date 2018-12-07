@@ -30,11 +30,12 @@
 
 
         <!-- Flags -->
-        <jacoco.skip.check>true</jacoco.skip.check>
-        <checkstyle.skip.check>true</checkstyle.skip.check>
+        <jacoco.skip.check>false</jacoco.skip.check>
+        <jacoco.fail.on.error>true</jacoco.fail.on.error>
+        <checkstyle.skip.check>false</checkstyle.skip.check>
         <checkstyle.fail.on.error>true</checkstyle.fail.on.error>
         <checkstyle.fail.on.violation>true</checkstyle.fail.on.violation>
-        <findbugs.skip.check>true</findbugs.skip.check>
+        <findbugs.skip.check>false</findbugs.skip.check>
         <findbugs.fail.on.error>true</findbugs.fail.on.error>
 
         <!-- Rules -->
@@ -339,6 +340,7 @@
                         </goals>
                         <configuration>
                             <skip>${jacoco.skip.check}</skip>
+                            <haltOnFailure>${jacoco.fail.on.error}</haltOnFailure>
                             <rules>
                                 <rule>
                                     <element>${rule.element.coverage}</element>
